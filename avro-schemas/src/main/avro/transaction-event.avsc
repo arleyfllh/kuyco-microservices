@@ -1,0 +1,42 @@
+{
+  "namespace": "com.kuyco.avro_schemas",
+  "type": "record",
+  "name": "TransactionEvent",
+  "fields": [
+    {
+      "name": "id",
+      "type": "long"
+    },
+    {
+      "name": "customerId",
+      "type": "long"
+    },
+    {
+      "name": "customerName",
+      "type": "string"
+    },
+    {
+      "name": "itemId",
+      "type": "long"
+    },
+    {
+      "name": "itemName",
+      "type": "string"
+    },
+    {
+      "name": "quantity",
+      "type": "int"
+    },
+    {
+      "name": "totalPrice",
+      "type": "double"
+    },
+    {
+      "name": "createdAt",
+      "type": {
+        "type": "long",
+        "logicalType": "timestamp-millis"
+      }
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "namespace": "com.kuyco.avro_schemas",
+  "type": "record",
+  "name": "CustomerAvro",
+  "fields": [
+    {
+      "name": "id",
+      "type": "long"
+    },
+    {
+      "name": "name",
+      "type": "string"
+    },
+    {
+      "name": "email",
+      "type": "string"
+    },
+    {
+      "name": "balance",
+      "type": "double"
+    },
+    {
+      "name": "createdAt",
+      "type": {
+        "type": "long",
+        "logicalType": "timestamp-millis"
+      }
+    }
+  ]
+}

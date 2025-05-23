@@ -1,0 +1,28 @@
+server:
+  port: 8181
+
+kafka:
+  topic:
+    customer-created: customer-created
+    transaction-created: transaction-created
+
+spring:
+  security:
+    user:
+      name: admin
+      password: admin
+  datasource:
+    url: jdbc:postgresql://localhost:5432/kuyco
+    username: postgres
+    password: postgres
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  kafka:
+    bootstrap-servers: localhost:9092
+    properties:
+      schema.registry.url: http://localhost:8081
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: io.confluent.kafka.serializers.KafkaAvroSerializer
